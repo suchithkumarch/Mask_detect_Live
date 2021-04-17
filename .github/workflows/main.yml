@@ -24,3 +24,12 @@ jobs:
       
     - name: Test with unittest
       run:  python3 source/test_model.py
+
+
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: suchithkumarch/scical
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }} 
