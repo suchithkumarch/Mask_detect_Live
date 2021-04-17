@@ -1,4 +1,4 @@
-name: CI Pipeline Mask Detection
+name: CI Pipeline Mask Detection2
 
 on:
   push:
