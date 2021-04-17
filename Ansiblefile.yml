@@ -6,4 +6,5 @@
     - name: Pull scical image
       docker_image:
         name: suchithkumarch/scical
+        tag: main-56bfc41
         source: pull
