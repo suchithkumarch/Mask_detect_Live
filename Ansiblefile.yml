@@ -5,5 +5,5 @@
   tasks:
     - name: Pull scical image
       docker_image:
-        name: suchithkumarch/scical
+        name: suchithkumarch/scical:main-56bfc41
         source: pull
