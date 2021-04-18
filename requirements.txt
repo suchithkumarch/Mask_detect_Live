@@ -2,14 +2,9 @@ Flask
 Flask-WTF==0.14.3
 gunicorn
 h5py
-Jinja2
 Keras
 numpy
 opencv-python
-Pillow
 tensorboard
 tensorflow
-tqdm
-urllib3
-utils
 imutils
