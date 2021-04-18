@@ -1,1 +1,1 @@
-web: gunicorn app:detect_mask
+web: gunicorn detect_mask:app
