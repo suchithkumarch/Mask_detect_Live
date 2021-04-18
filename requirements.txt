@@ -12,3 +12,4 @@ tensorflow
 tqdm
 urllib3
 utils
+imutils
