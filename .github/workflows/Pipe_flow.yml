@@ -38,8 +38,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }} 
 
-    - name: Test docker image
-      run:  docker container run suchithkumarch/scical:latest
+
 
                 
     - name: Deploy to heroku        
