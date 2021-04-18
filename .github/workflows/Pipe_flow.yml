@@ -46,7 +46,7 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "polar-reaches-98934"
         heroku_email: "suchithkumar.ch@gmail.com"
-        justlogin: true
+
 
     - name: Heroku login status
       run:  heroku auth:whoami
