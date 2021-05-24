@@ -138,6 +138,11 @@ def fun (i):
 
 import unittest
 import warnings 
+import logging
+logging.basicConfig(filename='mask_logs.log',format='%(asctime)s %(message)s')
+logger=logging.getLogger()
+logger.setLevel(logging.INFO)
+#logging.info('This is an info message')
 def get_image(i):       
 	path = "./sample_test_images/"+str(i)+".png"
 	return cv2.imread(path)      
@@ -147,18 +152,21 @@ class TestModel(unittest.TestCase):
     def test1(self):        
         result,r = get_label(get_image(1))
         print("Label of Img ",1,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 1:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 0)
         self.assertNotEqual(result, 1)
       
     def test2(self):        
         result,r = get_label(get_image(2))
         print("Label of Img ",2,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 2:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 0)
         self.assertNotEqual(result, 1)
       
     def test3(self):        
         result,r = get_label(get_image(3))
         print("Label of Img ",3,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 3:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 1)
         self.assertNotEqual(result, 0)
 
@@ -166,24 +174,28 @@ class TestModel(unittest.TestCase):
     def test4(self):        
         result,r = get_label(get_image(4))
         print("Label of Img ",4,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 4:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 1)
         self.assertNotEqual(result, 0)
       
     def test5(self):        
         result,r = get_label(get_image(5))
         print("Label of Img ",5,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 5:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 1)
         self.assertNotEqual(result, 0)
               
     def test6(self):        
         result,r = get_label(get_image(6))
         print("Label of Img ",6,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 6:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 1)
         self.assertNotEqual(result, 0)
       
     def test7(self):        
         result,r = get_label(get_image(7))
         print("Label of Img ",7,":- ",result,"with accuracy",r,", i.e Status : ",fun(result))
+        logger.info("Label of Img 7:- %d with accuracy %f i.e Status : %s",result,r,fun(result))
         self.assertEqual(result, 0)
         self.assertNotEqual(result, 1)
       
@@ -197,4 +209,3 @@ class TestModel(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
     
-
