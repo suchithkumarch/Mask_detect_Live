@@ -93,7 +93,10 @@ def video_mask_detector():
     # cleanup
     cv2.destroyAllWindows()
     video.stop()
-
+import logging    
+logging.basicConfig(filename='mask_logs.log',format='%(asctime)s %(message)s')
+logger=logging.getLogger()
+logger.setLevel(logging.INFO)
 #def detect_face(img):
 def detect_mask_in_frame(img):
     # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -121,6 +124,8 @@ def detect_mask_in_frame(img):
         cv2.rectangle(img,(x,y),(x+w,y+h) ,color_dict[label],2)
         cv2.rectangle(img,(x,y-30),(x+w,y),color_dict[label],-1)
         cv2.putText(img,label_txt,(x,y-10),cv2.FONT_HERSHEY_SIMPLEX ,0.6,(255,255,255),2)
+        dict={0:'MASK',1:'NO MASK'}
+        logger.info("Label of Img :- %d with accuracy %f i.e Status : %s",label,float(accuracy),dict[label])
     return img
 """
 def detect_mask_in_frame_with_yolo(img):
@@ -207,4 +212,3 @@ def get_label(img):
 """
 if __name__ == '__main__':
     video_mask_detector()
-
