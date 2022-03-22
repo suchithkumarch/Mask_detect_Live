@@ -1,3 +1,3 @@
 MASK DETECTION LIVE USING MACHINE LEARNING, WEB DEVELOPMENT & DEVOPS TOOLS.
 
-- SPE Final Project by IMT2018019 Chebrolu Suchith Kumar and IMT2018517 Pavan Sudeesh Peruru
+- SPE Final Project by IMT2018019 Chebrolu Suchith Kumar and IMT2018517 Pavan Sudeesh Peruru.
